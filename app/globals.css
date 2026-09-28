@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #f3f3f3; --ink: #0a0a0a; --accent: #6c5ce7; }
+html, body { background: var(--bg); color: var(--ink); }
+body { overflow-x: hidden; }
+html.scroll-locked, html.scroll-locked body { overflow: hidden; }
+
+.section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 6vw; }
+@media (min-width: 768px) { .section { padding: 0 8vw; } }
+
+.headline { font-size: clamp(64px, 12vw, 180px); font-weight: 700; line-height: 0.92; letter-spacing: -0.04em; }
+.headline-md { font-size: clamp(48px, 9vw, 140px); font-weight: 700; line-height: 0.95; letter-spacing: -0.035em; }
+.final-title { font-size: clamp(44px, 7.5vw, 112px); font-weight: 600; line-height: 0.92; letter-spacing: -0.035em; }
+.eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 500; color: rgba(10,10,10,0.55); }
+.cta {
+  display: inline-block; background: var(--accent); color: #fff; padding: 14px 28px; border-radius: 999px;
+  font-weight: 500; font-size: 15px; transition: transform .2s ease, background-color .2s ease;
+}
+.cta:hover { transform: translateY(-2px); background: #5a4bcf; }
